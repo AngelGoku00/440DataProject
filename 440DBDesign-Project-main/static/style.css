@@ -1,0 +1,118 @@
+:root {
+    --main-bg-color: #f8f8f8;
+    --main-accent-color: #4CAF50; /* Consider a softer shade if desired */
+    --main-text-color: #333;
+    --error-color: red;
+    --light-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    --white-color: #fff;
+    --border-radius: 0.5em; /* Rounded corners */
+    --box-padding: 1.5em;
+    --transition-speed: 0.3s; /* Smooth transitions for interactive elements */
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif; /* Modern font */
+    background-color: var(--main-bg-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Improved readability */
+}
+
+header {
+    background-color: var(--main-accent-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 1.5em;
+    box-shadow: var(--light-shadow); /* Subtle shadow */
+}
+
+main {
+    padding: 2em;
+}
+
+@media only screen and (max-width: 600px) {
+    main {
+        padding: 1em;
+    }
+}
+
+.signup-section, .link-group {
+    background-color: var(--white-color);
+    padding: var(--box-padding);
+    margin: 2em 0;
+    border-radius: var(--border-radius);
+    box-shadow: var(--light-shadow);
+}
+
+h3 {
+    color: var(--main-accent-color);
+    margin-bottom: 0.5em; /* Space below headings */
+}
+
+.form-group {
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 0.5em;
+    font-weight: bold; /* Emphasize labels */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 0.8em;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    margin-bottom: 1em;
+    background-color: #fff; /* Clear background */
+    transition: border-color var(--transition-speed); /* Smooth transition for border color */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus {
+    outline: none;
+    border-color: var(--main-accent-color); /* Accent color on focus */
+}
+
+button.btn-primary {
+    background-color: var(--main-accent-color);
+    color: var(--white-color);
+    padding: 0.8em 1.5em;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color var(--transition-speed); /* Smooth background transition */
+}
+
+button.btn-primary:hover {
+    background-color: darken(var(--main-accent-color), 10%); /* Slightly darker on hover */
+}
+
+.msg {
+    margin-top: 1em;
+    color: var(--error-color);
+    font-weight: bold; /* Bold error messages */
+}
+
+.link-group {
+    text-align: center;
+}
+
+.link-group a {
+    text-decoration: none;
+    color: var(--main-accent-color);
+    transition: color var(--transition-speed); /* Smooth color transition */
+}
+
+.link-group a:hover {
+    color: darken(var(--main-accent-color), 10%); /* Darker on hover */
+    text-decoration: underline; /* Underline for clarity */
+}
